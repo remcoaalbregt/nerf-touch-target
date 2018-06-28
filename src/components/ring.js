@@ -20,12 +20,12 @@ const StyledRing = styled.div`
 	border-color: ${getBorderColor};
 `;
 
-const Ring = ({ onClick, value, color }) => (
-	<StyledRing onClick={onClick} value={value} color={color} />
+const Ring = ({ onTouchStart, value, color }) => (
+	<StyledRing onTouchStart={onTouchStart} value={value} color={color} />
 )
 
 Ring.propTypes = {
-	onClick: PropTypes.func.isRequired,
+	onTouchStart: PropTypes.func.isRequired,
 	value: PropTypes.number.isRequired,
 	color: PropTypes.string.isRequired
 }
